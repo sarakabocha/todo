@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link href="todo.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <ul id="todoList">
+      <li>
+        <input type="checkbox" name="todo1" id="todo1" />
+        <label for="todo1" id="todo1Label">Todo 1</label>
+        <input type="text" id="todo1Edit" class="edit-mode" />
+        <button type="button" onclick="editTodo(todo1)">Edit</button>
+        <button type="button">Delete</button>
+      </li>
+      <button type="button" id="createButton">Add</button>
+    </ul>
+  </body>
+  <script src="todo.js"></script>
+</html>

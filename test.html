@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priority Options Test</title>
+  </head>
+  <body>
+    <!-- Replace the content of this div with the generated <select> element -->
+    <div id="priorityContainer">
+      <!-- Include the generated options here -->
+    </div>
+
+    <script>
+      function getPriorityOptions(selectedPriority) {
+        const priorities = ["low", "medium", "high"];
+        console.log("Selected Priority:", selectedPriority);
+        return priorities
+          .map((priority) => {
+            return `<option value="${priority}" ${
+              selectedPriority === priority ? "selected" : ""
+            }>${priority}</option>`;
+          })
+          .join("");
+      }
+
+      // Example usage
+      let prioritySelect = document.createElement("select");
+      prioritySelect.innerHTML = getPriorityOptions("");
+      document.getElementById("priorityContainer").appendChild(prioritySelect);
+    </script>
+  </body>
+</html>
